@@ -1,0 +1,126 @@
+body, input {
+  font-family: 'Lato', 'Helvetica Neue', Arial, sans-serif;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+	padding-top: 50px;
+}
+
+pre, code {
+  font-family: 'Ubuntu Mono', Monaco, courier, monospace;
+}
+
+
+a, a:hover, a:focus {
+	color: #6b85dd;
+}
+
+.navbar {
+	margin-bottom: 100px;
+}
+
+.navbar-inverse {
+	border-bottom: #ffffff 1px solid;
+}
+
+
+
+.toc h1 {
+	margin-top: 85px;
+}
+
+
+.btn-qojl, .btn-qojl:hover {
+	background: #d66761;
+	color: #ffffff;
+}
+
+.btn-qojl {
+	text-decoration: underline;
+}
+
+.btn-qutip, .btn-qutip:hover {
+	background: #a87db6;
+	color: #ffffff;
+}
+
+.btn-qutip {
+	text-decoration: underline;
+}
+
+.btn-qutipc, .btn-qutipc:hover {
+	background: #666666;
+	color: #ffffff;
+}
+
+.btn-qutipc {
+	text-decoration: underline;
+}
+
+.btn-qotb, .btn-qotb:hover {
+	background: #6cac5b;
+	color: #ffffff;
+}
+
+.btn-qotb {
+	text-decoration: underline;
+}
+
+.btn-group {
+	margin-bottom: 30px;
+}
+
+footer.footer {
+	width: 100%;
+	background: #cccccc;
+	text-align: center;
+	margin: 75px 0 0;
+	padding: 10px 0 10px 0;
+}
+
+#features .page-header, #packages .page-header {
+	text-align: left;
+}
+
+
+#features .fa-lg, #packages .fa-lg {
+	font-size: 80px;
+}
+
+#features #feature1, #packages #packages1 {
+	color: #d66761;
+}
+#features #feature2, #packages #packages2 {
+	color: #a87db6;
+}
+#features #feature3, #packages #packages3 {
+	color: #6cac5b;
+}
+
+.tab-code-example pre {
+	margin-top: 10px;
+}
+
+.nav-pills>li.active>a, .nav-pills>li.active>a:hover {
+	background: #6b85dd;
+}
+
+canvas {
+	margin: 25px 0;
+}
+
+/* Additions to documenter.css */
+nav.toc form {
+	background: #6b85dd;
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+
+nav.toc form select {
+	display: none;
+}
+
+nav.toc h1 {
+	padding-top: 40px;
+}
