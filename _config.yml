@@ -1,0 +1,5 @@
+source: src
+destination: build
+data_dir: src/benchmark-data
+kramdown:
+  syntax_highlighter: nil

@@ -1,0 +1,17 @@
+<div role="tabpanel" class="tab-pane fade" id="about">
+<div class="page-header">
+        <h2>About Bechmarking</h2>
+      </div>
+
+<div class="row">
+	<div class="col-md-12">
+	  <p>Benchmarking is a tricky thing to do right. Many different variables can significantly influence the results. The choice of examples and the presentation of the results may be biased towards one or the other framework. We tried our best to be as fair as possible. To give everybody the chance to reproduce our results, the entire benchmarking code is open source and can be found in the <a href="https://github.com/bastikr/QuantumOpticsFrameworks-Benchmarks">QuantumOpticsFrameworks-Benchmarks repository on GitHub</a>. If you find any mistakes or obtain different results we would be grateful if you could file an issue there.
+            </p>
+      <p>A few remarks on the benchmarking process:</p>
+    <ul>
+        <li>All benchmarks are performed on a <strong>single dedicated CPU core</strong>. Both cases, single-processing and multi-processing, are of interest with slightly different implications. Obviously, when working interactively on a single example, the complete available processing power should be used to get the answer as fast as possible. However, for embarrassingly parallel problems, like for example performing the same time-evolution for different parameters, it is favorable to avoid any unnecessary overhead stemming from premature parallelization.</li>
+        <li><strong>Startup time is neglected</strong>. Julia's just-in-time compilation, which is the key to generating extremely performant code, comes with a price. The first time a function is called with a certain set of argument types it has to be compiled which leads to a constant offset in every single benchmark. If the function is called often enough and/or runs long enough this overhead doesn't matter. However, if a function is called only once the overhead might be considerable and is the reason why often times using Julia feels less snappy compared to other languages.</li>
+    </ul>
+	</div>
+</div>
+</div>

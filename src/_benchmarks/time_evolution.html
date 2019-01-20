@@ -1,0 +1,137 @@
+<div role="tabpanel" class="tab-pane fade in active" id="timeevolution">
+                <div class="page-header">
+                    <h2>Time Evolution</h2>
+                </div>
+                
+                 <div class="page-header">
+                    <h3>Cavity Mode</h3>
+                </div>
+                <div class="row">
+                    <div class="col-md-8">
+
+                <p>A cavity mode, modeled as a Fock space with a certain cutoff, is driven on resonance with a classical laser. Since photon loss is included, the system is an open system and evolves according to a master equation
+
+                $$\dot{\rho} = i \big[ \rho, H \big] +  \kappa\big(a\rho a^\dagger - \frac{1}{2} a^\dagger a \rho - \frac{1}{2} \rho a^\dagger a \big)$$
+
+
+                with the Hamiltonian
+
+                $$H = \Delta_c a^\dagger a + \eta (a + a^\dagger).$$
+
+                </p>
+                <p>
+                    This benchmark measures the time it takes to create all necessary operators and states, perform a time-evolution according to a master equation and calculate the expectation values of the number operator at certain times. The Schrödinger time-evolution neglects the loss, obviously.
+                </p>
+                    </div>
+                    <div class="col-md-4 col-md-offset-0 col-xs-8 col-xs-offset-2">
+	                    <img src="images/benchmarks_cavity.svg" class="img-responsive">
+                    </div>
+                </div>
+                <div class="row">
+                    
+                    <div class="col-md-6">
+	                    <canvas id="timeevolution_schroedinger_cavity" data-title="Cavity Schrödinger Equation"></canvas>
+                       
+                    </div>
+                    <div class="col-md-6">
+	                    <canvas id="timeevolution_master_cavity" data-title="Cavity Master Equation"></canvas>
+                       
+                    </div>
+                    <div class="col-md-6">
+	                    <canvas id="timeevolution_master_timedependent_cavity" data-title="Cavity Master Equation (Time-Dependent)"></canvas>
+                       
+                    </div>
+                    <div class="col-md-6">
+	                    <canvas id="timeevolution_mcwf_cavity" data-title="Cavity Quantum Trajectories"></canvas>
+                       
+                    </div>
+                </div>
+                
+                <div class="page-header">
+                    <h3>Jaynes-Cummings Model</h3>
+                </div>
+                <div class="row">
+                    <div class="col-md-8">
+
+                <p>
+	                An atom, modeled as a dipole, is resonantly coupled to a cavity mode, modeled as a Fock space with a certain cutoff. Photon loss and incoherent driving by a thermal bath are included and taken into account by the master equation
+	                
+	               $$\dot{\rho} = i \big[ \rho, H \big] +  \kappa \left( 1 + \bar n \right) \, \mathcal{D} \left[ a \right] \rho + \kappa \bar n \, \mathcal{D} \left[ a^\dagger \right] \rho + \gamma \, \mathcal{D} \left[ \sigma^- \right] \rho$$ 
+	               
+	   with the Hamiltonian
+	   
+	   $$H = \omega_c \, a^\dagger a + \frac{\omega_a}{2} \, \sigma^z + g \big( a^\dagger \sigma^- + a \sigma^+ \big).$$
+	   
+	   </p>
+	   <p>
+		   Again, we create all necessary objects, perform a time evolution and calculate the expectation value of the number operator in the photon mode at particular times. For the Schrödinger equation the incoherent dynamics are neglected.
+	                
+                </p>
+                
+                    </div>
+                    <div class="col-md-4 col-md-offset-0 col-xs-8 col-xs-offset-2">
+	                    <img src="images/benchmarks_jaynescummings.svg" class="img-responsive">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                
+                <canvas id="timeevolution_schroedinger_jaynescummings" data-title="Jaynes-Cummings Schrödinger Equation"></canvas>
+                
+                    </div>
+                    <div class="col-md-6">
+	                    <canvas id="timeevolution_master_jaynescummings" data-title="Jaynes-Cummings Master Equation"></canvas>
+                       
+                    </div>
+                    <div class="col-md-6">
+	                    <canvas id="timeevolution_master_timedependent_jaynescummings" data-title="Jaynes-Cummings Master Equation (Time-Dependent)"></canvas>
+                       
+                    </div>
+                    <div class="col-md-6">
+	                    <canvas id="timeevolution_mcwf_jaynescummings" data-title="Jaynes-Cummings Quantum Trajectories"></canvas>
+                       
+                    </div>
+                </div>
+                
+                <div class="page-header">
+                    <h3>Particle</h3>
+                </div>
+                <div class="row">
+                    <div class="col-md-8">
+
+                <p>
+	                A Gaussian wave packet propagates in a harmonic potential while simultaneously being subject to friction, which is accounted for by the master equation
+	                
+	                $$\dot{\rho} = i \big[ \rho, H \big] + \nu \mathcal{D} \left[ \sqrt{\frac{\omega m}{2}} \, x + \frac{i}{\sqrt{2 \omega m}} \, p \right] \rho$$
+	               
+	                 and the Hamiltonian
+	                 
+	                 $$H = \frac{p^2}{2m} + \frac{m \omega^2}{2} \, x^2.$$
+                </p>
+                <p>We measure the time it takes to create all necessary objects, perform a time evolution and calculate the expectation value of the position operator at certain times.</p>
+                
+                    </div>
+                    <div class="col-md-4 col-md-offset-0 col-xs-8 col-xs-offset-2">
+	                    <img src="images/benchmarks_particle.svg" class="img-responsive">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                
+                <canvas id="timeevolution_schroedinger_particle" data-title="Particle Schrödinger Equation"></canvas>
+                
+                    </div>
+                    <div class="col-md-6">
+	                    <canvas id="timeevolution_master_particle" data-title="Particle Master Equation"></canvas>
+                       
+                    </div>
+                    <div class="col-md-6">
+	                    <canvas id="timeevolution_master_timedependent_particle" data-title="Particle Master Equation (Time-Dependent)"></canvas>
+                       
+                    </div>
+                    <div class="col-md-6">
+	                    <canvas id="timeevolution_mcwf_particle" data-title="Particle Quantum Trajectories"></canvas>
+                       
+                    </div>
+                </div>
+</div>

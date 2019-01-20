@@ -1,0 +1,7 @@
+build
+src/documentation
+src/_benchmarks-sourcecode
+src/_codesnippets/build
+src/images/codesnippets
+src/benchmark-data
+.idea

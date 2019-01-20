@@ -1,0 +1,14 @@
+<div role="tabpanel" class="tab-pane tab-code-example fade {% if include.id == "example1" %}in active{% endif %}" id="{{ include.id }}">
+    <div class="page-header">
+        <h3>{{ include.title }}</h3>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+<pre><code class="language-julia">{% include_relative _codesnippets/build/{{ include.name }}.jl %}</code></pre>
+        </div>
+        <div class="col-md-6">
+           <img class="img-responsive" src="/images/codesnippets/{{ include.imgname }}" alt="">
+        </div>
+    </div>
+</div>
