@@ -1,18 +1,18 @@
-# QuantumOptics.jl website
+# JuliaDynamics.jl website
 
-The whole **QuantumOptics.jl** website is created from different parts:
-* **QuantumOptics.jl-examples** provides all the examples that are used and linked to in the documentation. They are created using jupyter notebooks and executed and converted to markdown with nbconvert. This markdown code is then copied to **QuantumOptics.jl-documentation**. Additionally, it provides the codesnippets that are used on the main page of the website.
-* **QuantumOptics.jl-documentation** is written with markdown. [Documenter.jl](https://juliadocs.github.io/Documenter.jl) is used to integrate the docstrings from **QuantumOptics.jl** and to generate html code which includes the examples from **QuantumOptics.jl-examples**.
-* **QuantumOptics.jl-benchmarks** generates json files containing the results of the benchmarks and provides the source code of the examples.
+The whole **JuliaDynamics.jl** website is created from different parts:
+* **JuliaDynamics.jl-examples** provides all the examples that are used and linked to in the documentation. They are created using jupyter notebooks and executed and converted to markdown with nbconvert. This markdown code is then copied to **JuliaDynamics.jl-documentation**. Additionally, it provides the codesnippets that are used on the main page of the website.
+* **JuliaDynamics.jl-documentation** is written with markdown. [Documenter.jl](https://juliadocs.github.io/Documenter.jl) is used to integrate the docstrings from **JuliaDynamics.jl** and to generate html code which includes the examples from **JuliaDynamics.jl-examples**.
+* **JuliaDynamics.jl-benchmarks** generates json files containing the results of the benchmarks and provides the source code of the examples.
 
 In this repository the following additional resources are defined:
 * A common header used in every single page.
 * A common navigation menu (on the top of each page).
 * A common footer.
 * The main page.
-* **QuantumOptics.jl** code snippets which are shown in the main page.
+* **JuliaDynamics.jl** code snippets which are shown in the main page.
 * Citation page.
-* Benchmark page presenting the data and source-code obtained from **QuantumOptics.jl-benchmarks**
+* Benchmark page presenting the data and source-code obtained from **JuliaDynamics.jl-benchmarks**
 
 [Jekyll](https://jekyllrb.com) is used to generate the (static) website from all different parts.
 
@@ -40,11 +40,11 @@ A basic principle is that any code that is shown should be run and tested automa
 It is recommended to place all resources into the same directory, i.e.:
 
     |
-    |--> ./QuantumOptics.jl
-    |--> ./QuantumOptics.jl-examples
-    |--> ./QuantumOptics.jl-documentation
-    |--> ./QuantumOptics.jl-benchmarks
-    |--> ./QuantumOptics.jl-website
+    |--> ./JuliaDynamics.jl
+    |--> ./JuliaDynamics.jl-examples
+    |--> ./JuliaDynamics.jl-documentation
+    |--> ./JuliaDynamics.jl-benchmarks
+    |--> ./JuliaDynamics.jl-website
 
 
 ## Software Requirements
@@ -60,8 +60,8 @@ The complete build process of all resources and the website itself can be done w
 This script runs the following operations that can of course also be performed manually to obtain finer control over the build process:
 
 * All git repositories are updated with `git pull`
-* Convert notebooks in `QuantumOptics.jl-examples` into markdown files and copy them to `QuantumOptics.jl-documentation`.
-* Build documentation in `QuantumOptics.jl-documentation` and copy them into `/src/documentation`.
+* Convert notebooks in `JuliaDynamics.jl-examples` into markdown files and copy them to `JuliaDynamics.jl-documentation`.
+* Build documentation in `JuliaDynamics.jl-documentation` and copy them into `/src/documentation`.
 * Copy results of benchmarks into `src/benchmark-data` and their source code into `src/_benchmarks_sourcecode`.
 * Run code snippets (which then are shown in the main page) with `julia make.jl` in `src/_codesnippets`.
 
