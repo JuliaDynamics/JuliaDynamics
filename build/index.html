@@ -7,12 +7,12 @@
 <meta name="description" content="A Julia Software Library For Dynamical Systems">
 <meta name="author" content="juliadynamics.github.io/DynamicalSystems.jl/latest/">
 <title>DynamicalSystems.jl</title>
-<link rel="icon" href="/images/favicon.png">
+<link rel="icon" href="https://dev.jaredhowland.com/juliadynamics/images/favicon.png">
 
 <!-- Bootstrap Core CSS -->
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 <!-- Custom CSS -->
-<link href="../css/juliadynamics.css" rel="stylesheet">
+<link href="https://dev.jaredhowland.com/juliadynamics/css/juliadynamics.css" rel="stylesheet">
 
 <!-- Custom Fonts -->
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -40,16 +40,16 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="/">DynamicalSystems.jl</a>
+            <a class="navbar-brand" href="https://dev.jaredhowland.com/juliadynamics/">DynamicalSystems.jl</a>
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
                 <li>
-                    <a href="/benchmarks">Benchmarks</a>
+                    <a href="https://dev.jaredhowland.com/juliadynamics/benchmarks">Benchmarks</a>
                 </li>
                 <li>
-                    <a href="/cite">Cite</a>
+                    <a href="https://dev.jaredhowland.com/juliadynamics/cite">Cite</a>
                 </li>
                 <li>
                     <a href="https://github.com/JuliaDynamics/DynamicalSystems.jl">GitHub</a>
@@ -164,7 +164,161 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="tab-content">
-                    
+                    <div role="tabpanel" class="tab-pane tab-code-example fade in active" id="example1">
+    <div class="page-header">
+        <h3>Particle in Harmonic Trap</h3>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+<pre><code class="language-julia">using DynamicalSystems
+basis = PositionBasis(-2, 2, 200)
+x = position(basis)
+p = momentum(basis)
+H = p^2/4 + 2*DenseOperator(x^2)
+energies, states = eigenstates((H+dagger(H))/2, 5)
+
+using PyPlot
+xpoints = samplepoints(basis)
+plot(xpoints, 2*xpoints.^2)
+fill_between(xpoints, 0., 2*xpoints.^2, alpha=0.5)
+for i=1:length(states)
+    plot(xpoints, abs2.(states[i].data).*40 .+ energies[i])
+end
+xlabel("Position")
+ylabel("Energy")
+tight_layout()
+savefig("test.svg")</code></pre>
+        </div>
+        <div class="col-md-6">
+           <img class="img-responsive" src="./images/codesnippets/test.svg" alt="">
+        </div>
+    </div>
+</div>
+                    <div role="tabpanel" class="tab-pane tab-code-example fade " id="example2">
+    <div class="page-header">
+        <h3>Squeezed Fock State</h3>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+<pre><code class="language-julia">using DynamicalSystems
+basis = PositionBasis(-2, 2, 200)
+x = position(basis)
+p = momentum(basis)
+H = p^2/4 + 2*DenseOperator(x^2)
+energies, states = eigenstates((H+dagger(H))/2, 5)
+
+using PyPlot
+xpoints = samplepoints(basis)
+plot(xpoints, 2*xpoints.^2)
+fill_between(xpoints, 0., 2*xpoints.^2, alpha=0.5)
+for i=1:length(states)
+    plot(xpoints, abs2.(states[i].data).*40 .+ energies[i])
+end
+xlabel("Position")
+ylabel("Energy")
+tight_layout()
+savefig("test.svg")</code></pre>
+        </div>
+        <div class="col-md-6">
+           <img class="img-responsive" src="./images/codesnippets/test.svg" alt="">
+        </div>
+    </div>
+</div>
+                    <div role="tabpanel" class="tab-pane tab-code-example fade " id="example3">
+    <div class="page-header">
+        <h3>Spin-3/2-System</h3>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+<pre><code class="language-julia">using DynamicalSystems
+basis = PositionBasis(-2, 2, 200)
+x = position(basis)
+p = momentum(basis)
+H = p^2/4 + 2*DenseOperator(x^2)
+energies, states = eigenstates((H+dagger(H))/2, 5)
+
+using PyPlot
+xpoints = samplepoints(basis)
+plot(xpoints, 2*xpoints.^2)
+fill_between(xpoints, 0., 2*xpoints.^2, alpha=0.5)
+for i=1:length(states)
+    plot(xpoints, abs2.(states[i].data).*40 .+ energies[i])
+end
+xlabel("Position")
+ylabel("Energy")
+tight_layout()
+savefig("test.svg")</code></pre>
+        </div>
+        <div class="col-md-6">
+           <img class="img-responsive" src="./images/codesnippets/test.svg" alt="">
+        </div>
+    </div>
+</div>
+                    <div role="tabpanel" class="tab-pane tab-code-example fade " id="example4">
+    <div class="page-header">
+        <h3>Three-Level System</h3>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+<pre><code class="language-julia">using DynamicalSystems
+basis = PositionBasis(-2, 2, 200)
+x = position(basis)
+p = momentum(basis)
+H = p^2/4 + 2*DenseOperator(x^2)
+energies, states = eigenstates((H+dagger(H))/2, 5)
+
+using PyPlot
+xpoints = samplepoints(basis)
+plot(xpoints, 2*xpoints.^2)
+fill_between(xpoints, 0., 2*xpoints.^2, alpha=0.5)
+for i=1:length(states)
+    plot(xpoints, abs2.(states[i].data).*40 .+ energies[i])
+end
+xlabel("Position")
+ylabel("Energy")
+tight_layout()
+savefig("test.svg")</code></pre>
+        </div>
+        <div class="col-md-6">
+           <img class="img-responsive" src="./images/codesnippets/test.svg" alt="">
+        </div>
+    </div>
+</div>
+                    <div role="tabpanel" class="tab-pane tab-code-example fade " id="example5">
+    <div class="page-header">
+        <h3>Jaynes-Cummings System</h3>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+<pre><code class="language-julia">using DynamicalSystems
+basis = PositionBasis(-2, 2, 200)
+x = position(basis)
+p = momentum(basis)
+H = p^2/4 + 2*DenseOperator(x^2)
+energies, states = eigenstates((H+dagger(H))/2, 5)
+
+using PyPlot
+xpoints = samplepoints(basis)
+plot(xpoints, 2*xpoints.^2)
+fill_between(xpoints, 0., 2*xpoints.^2, alpha=0.5)
+for i=1:length(states)
+    plot(xpoints, abs2.(states[i].data).*40 .+ energies[i])
+end
+xlabel("Position")
+ylabel("Energy")
+tight_layout()
+savefig("test.svg")</code></pre>
+        </div>
+        <div class="col-md-6">
+           <img class="img-responsive" src="./images/codesnippets/test.svg" alt="">
+        </div>
+    </div>
+</div>
                 </div>
             </div>
         </div>
