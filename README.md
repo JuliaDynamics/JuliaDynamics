@@ -1,4 +1,14 @@
-# JuliaDynamics website
+# JuliaDynamics
+
+This repository serves the following purposes:
+
+* Contains the source code for the JuliaDynamics website in the `src` and `build` folders.
+* Hosts the website via GitHub-pages and Jekyll.
+* Contains tutorials for all packages of JuliaDynamics in the `tutorials` folder.
+* Contains video resources for all packages of JuliaDynamics in the `videos` folder.
+
+
+## Website code
 
 In this repository the following additional resources are defined:
 * A common header used in every single page.
@@ -9,38 +19,3 @@ In this repository the following additional resources are defined:
 * Citation page.
 
 [Jekyll](https://jekyllrb.com) is used to generate the (static) website from all different parts.
-
-The website itself uses the following technologies:
-
-JavaScript libraries:
-* **jquery.js**
-* **Require.js**
-* **Bootstrap.js** for the layout.
-* **MathJax.js** for representing latex formulas.
-* **highlight.js** to dynamically highlight the source code.
-* **Chart.js** for the interactive benchmark plots.
-
-CSS:
-* **Bootstrap.css**
-* **font-awesome**
-* **Lato|Ubuntu+Mono** font
-
-A basic principle is that any code that is shown should be run and tested automatically before it is included.
-
-## Software Requirements
-
-* [Jekyll](https://jekyllrb.com)
-
-## Build process
-
-The complete build process of all resources and the website itself can be done with `julia makeall.jl`.
-
-This script runs the following operations that can of course also be performed manually to obtain finer control over the build process:
-
-* Copy results of benchmarks into `src/benchmark-data` and their source code into `src/_benchmarks_sourcecode`.
-* Run code snippets (which then are shown in the main page) with `julia make.jl` in `src/_codesnippets`.
-
-Finally, one uses jekyll to build website:
-    * For development run jekyll interactively: `jekyll serve`
-    * To just create it once: `jekyll build`
-This will create the finished website in the `build` directory which then can be deployed to the server.
