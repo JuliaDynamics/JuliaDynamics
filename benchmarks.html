@@ -1,0 +1,37 @@
+---
+layout: default
+type: benchmarks
+permalink: benchmarks/
+---
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="page-header">
+                <h1>
+                    Benchmarks
+                </h1>
+            </div>
+
+            <ul class="nav nav-tabs" role="tablist">
+                <li role="presentation" class="active"><a href="#timeevolution" aria-controls="timeevolution" role="tab"
+                                                          data-toggle="tab">Time Evolution</a></li>
+                <li role="presentation"><a href="#timeevolution" aria-controls="reduction" role="tab" data-toggle="tab">Reduction</a>
+                </li>
+                <li role="presentation"><a href="#timeevolution" aria-controls="arithmetics" role="tab"
+                                           data-toggle="tab">Arithmetics</a></li>
+                <li role="presentation"><a href="#about" aria-controls="about" role="tab" data-toggle="tab">About <span
+                        class="hidden-xs">Benchmarking</span></a></li>
+            </ul>
+
+            <!-- Tabpanel content -->
+            <div class="tab-content">
+                {% include_relative _benchmarks/time_evolution.html %}
+                {% include_relative _benchmarks/time_evolution.html %}
+                {% include_relative _benchmarks/time_evolution.html %}
+                {% include_relative _benchmarks/about.html %}
+            </div>
+            <!-- END: Tabpanel content -->
+        </div>
+    </div>
+</div>
