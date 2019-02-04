@@ -83,27 +83,6 @@ layout: default
         </div>
     </div>
 
-    <!-- Getting started / Installation -->
-    <div class="row">
-        <div class="col-lg-12">
-            <h2 class="page-header"><i class="fa fa-arrow-circle-right"></i> Getting Started</h2>
-
-            <p>To get started with Julia, check out <a
-                    href="https://docs.julialang.org/en/stable/manual/getting-started/">Julia's setup instructions</a>.
-                For plotting we recommend <a href="https://matplotlib.org">matplotlib</a> in Python, which plays nicely
-                with Julia. Before you can execute any of the framework's functions, you will need to add the <code>JuliaDynamics</code>
-                package to Julia, as shown below. Plotting with matplotlib is then enabled by adding the
-                <code>PyPlot</code> package. To install packages, you simply need to start Julia and press the
-                <code>]</code> key to enter the package manager (see also the <a
-                        href="https://docs.julialang.org/en/v1/stdlib/Pkg/index.html#Getting-Started-1">Julia docs</a>).
-                Then you can add packages as follows.</p>
-
-            <pre><code class="language-julia">|pkg> add JuliaDynamics   # Install JuliaDynamics.jl package
-|pkg> add PyPlot	  # Support for matplotlib from within Julia</code></pre>
-        </div>
-    </div>
-
-
     <!-- Code snippets! -->
     <div class="row">
         <div class="col-lg-12">
@@ -138,18 +117,26 @@ layout: default
         </div>
     </div>
 
-    <!-- Documentation -->
+
+    <!-- Getting started / Installation -->
     <div class="row">
         <div class="col-lg-12">
-            <h2 class="page-header"><i class="fa fa-book"></i> Extensive Documentation</h2>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-12">
-            <p>Besides the above quick start code snippets JuliaDynamics.jl comes with an <a href="documentation">extensive
-                documentation and many detailed examples</a>.</p>
-        </div>
+            <h2 class="page-header"><i class="fa fa-arrow-circle-right"></i> Getting Started</h2>
 
+            <p>
+                 All packages of JuliaDynamics are registered!
+                 To install them simply press <code>]</code> to enter the package manager mode and then do
+                 <pre><code class="language-julia">|pkg> add PackageName</code></pre>.
+
+                 To get started with Julia, check out <a
+                    href="https://docs.julialang.org/en/stable/manual/getting-started/">Julia's setup instructions</a>.
+
+                For plotting we recommend <code>PyPlot</code> or <code>Makie</code>.
+            </p>
+
+            <pre><code class="language-julia">|pkg> add JuliaDynamics   # Install JuliaDynamics.jl package
+|pkg> add PyPlot	  # Support for matplotlib from within Julia</code></pre>
+        </div>
     </div>
 
     <!-- Open Source Section -->
