@@ -16,7 +16,7 @@
 # source: src
 # destination: build
 # data_dir: src/benchmark-data
-site: https://dev.jaredhowland.com/juliadynamics/
+site: https://juliadynamics.github.io/JuliaDynamics/
 # kramdown:
 #   syntax_highlighter: nil
   
