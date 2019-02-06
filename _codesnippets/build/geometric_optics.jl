@@ -2,7 +2,6 @@ using DynamicalBilliards, PyPlot
 
 # Create a circular "lens"
 o = Antidot(SVector(1.0, 0.75), 0.5)
-# in a rectangular box
 bd = Billiard(billiard_rectangle(2.5, 1.5)..., o)
 
 trans, refra = law_of_refraction(1.5)
