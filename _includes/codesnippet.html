@@ -11,7 +11,7 @@
            {% if include.imgname %}
             <img class="img-responsive" src="./videos/codesnippets/{{ include.imgname }}" alt="">
             {% elsif include.vidname %}
-                <video width="320" height="240" controls>
+                <video width=100% controls loop>
                     <source src="./videos/codesnippets/{{ include.vidname }}" type="{{ include.vidtype }}">
                     Your browser does not support the video tag.
     </video>
