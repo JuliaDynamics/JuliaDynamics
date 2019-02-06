@@ -8,7 +8,14 @@
 <pre><code class="language-julia">{% include_relative _codesnippets/build/{{ include.name }}.jl %}</code></pre>
         </div>
         <div class="col-md-6">
-           <img class="img-responsive" src="./videos/codesnippets/{{ include.imgname }}" alt="">
+           {% if include.imgname %}
+            <img class="img-responsive" src="./videos/codesnippets/{{ include.imgname }}" alt="">
+            {% elsif include.vidname %}
+                <video width="320" height="240" controls>
+                    <source src="./videos/codesnippets/{{ include.vidname }}" type="{{ include.vidtype }}">
+                    Your browser does not support the video tag.
+    </video>
+{% endif %}
         </div>
     </div>
 </div>
