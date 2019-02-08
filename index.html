@@ -17,7 +17,7 @@ layout: default
 <div class="container">
     <!-- Description of JuliaDynamics -->
     <div class="row">
-        <div class="col-md-10 col-md-offset-1">
+        <div class="col-md-8 col-md-offset-2">
             <p class="lead text-center text-muted"> JuliaDynamics is a GitHub organization that develops <a
                 href="http://www.julialang.org">Julia</a> packages dealing with nonlinear dynamics & chaos. </p>
         </div>
@@ -87,13 +87,12 @@ layout: default
         <div class="col-lg-12">
             <h2 class="page-header"><i class="fa fa-file-code-o"></i> Code Examples</h2>
 
-            <ul class="nav nav-pills" role="tablist">
-                <li role="presentation" class="active"><a href="#example1" aria-controls="example1" role="tab"
-                                                          data-toggle="tab">Chaos in billiards</a></li>
+            <ul class="nav nav-pills nav-justified" role="tablist">
+                <li role="presentation" class="active"><a href="#example1" aria-controls="example1" role="tab" data-toggle="tab">Chaos in billiards</a></li>
                 <li role="presentation"><a href="#example2" aria-controls="example2" role="tab" data-toggle="tab">Geometric optics</a></li>
                 <li role="presentation"><a href="#example3" aria-controls="example3" role="tab" data-toggle="tab">Magnetic & periodic billiards</a></li>
                 <li role="presentation"><a href="#example4" aria-controls="example4" role="tab" data-toggle="tab">Boundary maps </a></li>
-                <li role="presentation"><a href="#example5" aria-controls="example5" role="tab" data-toggle="tab">Test5</a></li>
+                <li role="presentation"><a href="#example5" aria-controls="example5" role="tab" data-toggle="tab">Lyapunov exponents</a></li>
                 <li role="presentation"><a href="#example6" aria-controls="example6" role="tab" data-toggle="tab">Test6</a></li>
                 <li role="presentation"><a href="#example7" aria-controls="example7" role="tab" data-toggle="tab">Test7</a></li>
                 <li role="presentation"><a href="#example8" aria-controls="example8" role="tab" data-toggle="tab">Recurrence matrices</a></li>
@@ -106,9 +105,9 @@ layout: default
             <div class="tab-content">
                 {% include codesnippet.html id="example1" name="billiard_disperse" vidname = "stadium.mp4" vidtype = "video/mp4" title="Chaos arising for particles in a focusing billiard"%}
                 {% include codesnippet.html id="example2" name="geometric_optics" vidname = "geometric.mp4" vidtype = "video/mp4" title="Geometric optics and refraction law through ray-splitting" %}
-                {% include codesnippet.html id="example3" name="magnetic_periodic" imgname="magnetic_periodic.png" title="Magnetic (circular propagation) and periodic (rectangle or hexagonal) billiards" %}
+                {% include codesnippet.html id="example3" name="magnetic_periodic" imgname="magnetic_periodic.png" title="Magnetic and rectangular/hexagonal periodic billiards" %}
                 {% include codesnippet.html id="example4" name="boundary_map" imgname="boundary_map.png" title="Parallelized boundary map of the mushroom billiard" %}
-                {% include codesnippet.html id="example5" name="test" imgname="test.svg" title="Jaynes-Cummings System" %}
+                {% include codesnippet.html id="example5" name="lyapunovs" imgname="lyapunovs.png" title="Lyapunov spectrum of the Rössler system" %}
                 {% include codesnippet.html id="example6" name="test" imgname="test.svg" title="Jaynes-Cummings System" %}
                 {% include codesnippet.html id="example7" name="test" imgname="test.svg" title="Jaynes-Cummings System" %}
                 {% include codesnippet.html id="example8" name="recurrence" imgname="recurrence.png" title="Recurrence matrices of the Rössler system" %}
