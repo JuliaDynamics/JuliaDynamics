@@ -10,3 +10,8 @@ This repository serves the following purposes:
 ---
 
 The website was modeled after the website of [QuantumOptics.jl](https://qojulia.org/) and most code that builds the site was re-used from the repository of QuantumOptics.jl (with permission).
+
+---
+To build locally do follow the instructions from here: https://jekyllrb.com/docs/
+
+(install Jekyll and then do `bundle exec jekyll serve` which serves by default to http://localhost:4000)
