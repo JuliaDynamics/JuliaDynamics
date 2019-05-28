@@ -24,7 +24,7 @@ site: https://juliadynamics.github.io/JuliaDynamics/
 title: JuliaDynamics
 email: datseris.george@gmail.com
 description: JuliaDynamics # this means to ignore newlines until "baseurl:"
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "/JuliaDynamics" # the subpath of your site, e.g. /blog
 url: "https://juliadynamics.github.io/JuliaDynamics/" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb
 github_username:  jekyll
