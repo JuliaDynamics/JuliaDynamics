@@ -18,6 +18,7 @@ a, a:hover, a:focus {
 
 .navbar {
 	margin-bottom: 100px;
+	font-size: 20px;
 }
 
 .navbar-inverse {
