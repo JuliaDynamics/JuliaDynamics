@@ -17,8 +17,8 @@
 # destination: build
 # data_dir: src/benchmark-data
 
-#site: https://juliadynamics.github.io/JuliaDynamics/
-site: https://shakyaprashant.github.io/JuliaDynamics/
+site: https://juliadynamics.github.io/JuliaDynamics/
+#site: https://shakyaprashant.github.io/JuliaDynamics/
 
 # kramdown:
 #   syntax_highlighter: nil
