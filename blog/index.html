@@ -1,0 +1,77 @@
+---
+layout: default
+---
+<div class="container">
+
+  <!-- {%- if site.posts.size > 0 -%}
+    <h2 class="post-list-heading">{{ page.list_title | default: "Posts" }}</h2>
+      <ul class="post-list">
+        {%- for post in site.posts -%}
+        <li>
+          {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+          <span class="post-meta">{{ post.date | date: date_format }}</span>
+          <h3>
+            <a class="post-link" href="{{ post.url | relative_url }}">
+              {{ post.title | escape }}
+            </a>
+          </h3>
+          {%- if site.show_excerpts -%}
+            {{ post.excerpt }}
+          {%- endif -%}
+        </li>
+      {%- endfor -%}
+    </ul>
+  {%- endif -%} -->
+
+  {% for post in paginator.posts %}
+	<h2 class="post-title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+	<p class="post-meta">{{ post.date | date_to_string }}</p>
+	<p class="post-excerpt">{{ post.excerpt | strip_html }}&hellip; (<a href="{{ post.url  | relative_url }}">Read More</a>)</p>
+    {% endfor %}
+
+    <!-- {% if paginator.total_pages > 1 %}
+    <div class="pagination">
+	    <ul>
+        {% if paginator.previous_page %}
+		<li class="prev"><a href="{{ site.baseurl }}/blog/{% if paginator.previous_page != 1 %}page{{ paginator.previous_page }}{% endif %}">Previous</a></li>
+        {% endif %}
+		<li><a {% if paginator.page == 1 %}class="active" {% endif %}href="{{ site.baseurl }}/blog/">1</a></li>
+            {% for count in (2..paginator.total_pages) %}
+		<li><a {% if paginator.page == count %}class="active" {% endif %}href="{{ site.baseurl }}/blog/page{{ count }}">{{ count }}</a></li>
+        {% endfor %}
+        {% if paginator.next_page %}
+		<li class="next"><a href="{{ site.baseurl }}/blog/page{{ paginator.next_page }}">Next</a></li>
+        {% endif %}
+	</ul>
+</div>
+{% endif %} -->
+
+        <br><br>
+
+        {% if paginator.total_pages > 1 %}
+        <div class="wj-pagination"> 
+        {% if paginator.previous_page %}
+        <a href="{{ site.baseurl }}/blog/{% if paginator.previous_page != 1 %}page{{ paginator.previous_page }}{% endif %}">&laquo; Prev</a>
+        {% else %}
+            <span>&laquo; Prev</span>
+        {% endif %}
+
+        {% for page in (1..paginator.total_pages) %}
+            {% if page == paginator.page %}
+            <span class="active">{{ page }}</span>
+            {% elsif page == 1 %}
+            <a {% if paginator.page == 1 %}class="active" {% endif %}href="{{ site.baseurl }}/blog/">1</a>
+            {% else %}
+            <a {% if paginator.page == page %}class="active" {% endif %}href="{{ site.baseurl }}/blog/page{{ page }}">{{ page }}</a>
+            {% endif %}
+        {% endfor %}
+
+        {% if paginator.next_page %}
+            <a href="{{ site.baseurl }}/blog/page{{ paginator.next_page }}">Next &raquo;</a>
+        {% else %}
+            <span>Next &raquo;</span>
+        {% endif %}
+        </div>
+        {% endif %}
+
+</div>

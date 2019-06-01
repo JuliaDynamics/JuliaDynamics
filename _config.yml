@@ -38,6 +38,12 @@ theme: minima
 show_excerpts: true
 plugins:
   - jekyll-feed
+  - jekyll-paginate
+
+paginate:      3
+  
+permalink: '/blog/:year/:title/'
+paginate_path: '/blog/page:num/'
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
