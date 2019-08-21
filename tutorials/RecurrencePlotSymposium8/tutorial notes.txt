@@ -1,0 +1,11 @@
+contents:
+
+* basic stuff / intro
+* dynamical systems / recurrence plots
+* multiple dispatch, and its effectiveness (a lot from stefan's talk)
+* code performance and optimization ? (too much for the rp8 imo)
+* Packages (useful ecosystem stuff) -> this can be sub part of multiple dispatch or directly after multiple dispatch
+  * iterative solvers (nice exercise with strang matrix)
+  * distributions
+  * ordinary diff eq + measurements
+  * Dataframes?
